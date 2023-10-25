@@ -1,3 +1,7 @@
-console.log ("Qual o nome do seu player?")
+var buttonOn = document.getElementById("lightOn");
+var ButtonOff = document.getElementById("lightOff");
+var imgOn = document.getElementById("imgLightOn")
 
-console.log ("Bem vindo" + nickname)
+function turnOn() {
+    if (imgOn.style.display=='none')
+}
