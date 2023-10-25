@@ -1,7 +1,8 @@
-var buttonOn = document.getElementById("lightOn");
-var ButtonOff = document.getElementById("lightOff");
-var imgOn = document.getElementById("imgLightOn")
+
+function turnOff() {
+    document.getElementById("imgLightOn").style.display='none'
+}
 
 function turnOn() {
-    if (imgOn.style.display=='none')
+    document.getElementById("imglightOff").style.display='none'
 }
