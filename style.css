@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+}
+
+#imgLightOff {
+    display: none;
+}
+
+
+img {
+    display: block;
+    margin-left: 45%;
+}
