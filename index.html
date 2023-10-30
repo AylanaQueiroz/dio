@@ -15,7 +15,7 @@
         <button onclick="turnOn()" id="lightOn" type="button" class="btn btn-secondary ">Ligar lâmpada</button>
         <img id="imgLightOn" src="img/lightOn.jpg">
         <img id="imgLightOff" src="img/lightOff.jpg">
-        <button onclick="turnOff()" id="lightOff" type="button" class="btn btn-secondaryv ">Desligar lâmpada</button>
+        <button onclick="turnOff()" id="lightOff" type="button" class="btn btn-secondaryv">Desligar lâmpada</button>
         <hr>
     </div>
 
@@ -23,8 +23,27 @@
         <h1>Alterando inner html:</h1>
         <p id="pTest">Hello world!!</p>
         <button onclick="changeP()"> Click here</button>
+        <hr>
+    </div>
+    <div>
+        <p onclick="testeIn()" id="testeInner"> Somar 5+3 = </p>
+        <button onclick="document.write(5+3)"> resultado</button>
+        <hr>
+    </div>
+    <div class="container d-flex">
+        <h1>Radar de Velocidade</h1>
+        <p>Calcule se o carro será multado</p>
+        <p>A velocidade limite é de 80 km/h</p>
+        <P>Velocidade que o carro passou:</P><input id="velCarro" type="number" value="">
+        <button onclick="radarDeVelocidade()">Calcular velocidade</button>
+        <p id="resultadoVelocidade">resposta</p>
+        
     </div>
 
+
+
+
+    </div>
 
     <script src="script.js"></script>
 </body>
