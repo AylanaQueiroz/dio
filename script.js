@@ -38,4 +38,13 @@ function radarDeVelocidade(){
 
 }
 
-//
+
+const teste = document.getElementById('gtest')
+console.log(teste)
+
+
+const lampadaLigada =document.querySelector('#lampadaOnTeste');
+
+function desligarTeste(){
+    lampadaLigada.src="./img/lightOff.jpg"
+}
