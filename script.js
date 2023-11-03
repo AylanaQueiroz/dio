@@ -78,8 +78,63 @@ botaoOff.addEventListener('click', changeImgToRed)
 
 
 function changeImgToGreen() {
-    red.src = "./img/greenButton.avif"
+    green.src = "./img/greenButton.avif"
     //green.src = "./img/redButton.avif"
 }
 
 botaoON.addEventListener('click', changeImgToGreen)
+
+//Eventos com teclado:
+
+let inputKey = document.querySelector('#testKey')
+
+function shootAlert() {
+
+    alert ("Botão apertado")
+}
+
+inputKey.addEventListener('keydown', shootAlert)
+
+
+//evento onfocus
+
+
+var focus = document.querySelector("#testOnfocus")
+
+function onFocus(){
+    console.log("testando Onfocus")
+}
+
+focus.addEventListener('focus', onFocus)
+
+//evento OnBlur
+
+var blur = document.querySelector('#cidade')
+
+function onBlur(){
+    console.log ("testando efeito Onblur")
+}
+
+blur.addEventListener('blur',onBlur)
+
+//evento OnChange
+
+var change = document.querySelector('#estadoCivil')
+
+function onChange(){
+    alert("Completou certinho?")
+
+}
+
+change.addEventListener('change',onChange)
+
+//evento OnInput
+
+var input= document.querySelector('#profissao')
+
+function onInput(){
+
+    console.log("testando efeito on INPUTTT")
+}
+
+input.addEventListener('input',onInput)
