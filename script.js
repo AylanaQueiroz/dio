@@ -90,7 +90,7 @@ let inputKey = document.querySelector('#testKey')
 
 function shootAlert() {
 
-    alert ("Botão apertado")
+    alert("Botão apertado")
 }
 
 inputKey.addEventListener('keydown', shootAlert)
@@ -101,7 +101,7 @@ inputKey.addEventListener('keydown', shootAlert)
 
 var focus = document.querySelector("#testOnfocus")
 
-function onFocus(){
+function onFocus() {
     console.log("testando Onfocus")
 }
 
@@ -111,30 +111,56 @@ focus.addEventListener('focus', onFocus)
 
 var blur = document.querySelector('#cidade')
 
-function onBlur(){
-    console.log ("testando efeito Onblur")
+function onBlur() {
+    console.log("testando efeito Onblur")
 }
 
-blur.addEventListener('blur',onBlur)
+blur.addEventListener('blur', onBlur)
 
 //evento OnChange
 
 var change = document.querySelector('#estadoCivil')
 
-function onChange(){
+function onChange() {
     alert("Completou certinho?")
 
 }
 
-change.addEventListener('change',onChange)
+change.addEventListener('change', onChange)
 
 //evento OnInput
 
-var input= document.querySelector('#profissao')
+var input = document.querySelector('#profissao')
 
-function onInput(){
+function onInput() {
 
     console.log("testando efeito on INPUTTT")
 }
 
-input.addEventListener('input',onInput)
+input.addEventListener('input', onInput)
+
+//validação de formulário utilizando Onsubmit
+
+
+
+
+function validateForm() {
+    
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+   
+    if (username.value == "") {
+       alert("username must be filled out");{
+        event.preventDefault()
+       }
+       
+    }else if (password.value == ""){
+         alert("password must be filled out");{
+            event.preventDefault()
+         }
+    }else {
+        alert('ok')
+    }
+}
+

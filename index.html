@@ -60,7 +60,7 @@
         <button id="btnON">ON</button>
         <button id="btnOff">OFF</button>
         <img id="testGreen" src="img/greenButton.avif" alt="">
-<hr>
+        <hr>
     </div>
     <div class="container d-flex form">
         <h1>Eventos com teclado </h1>
@@ -74,10 +74,21 @@
         <input id="estadoCivil" type="text"> Qual seu estado civil?
         <label for="estadoCivil"></label><br>
         <input id="profissao" type="text">Qual sua profissão?
-        <label for="profissao" ></label><br>
+        <label for="profissao"></label><br>
+        <hr>
         <button>Enviar</button>
     </div>
-
+    <h1>Validando formulário com o Onsubmit</h1>
+    <div class="container d-flex form">
+        <form onsubmit="validateForm()">
+         
+            <label for="username">Username</label>
+            <input id="username" name="otp" type="text"><br>
+            <label for="password" type="password">Password</label>
+            <input id="password" type="password"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 
     <script src="script.js"></script>
