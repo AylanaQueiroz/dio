@@ -27,9 +27,9 @@ buttonNewtask.addEventListener('click', newTask)
 
 
 function newTask(){
-
+    var novaTaskNomeada = document.querySelector('.inputTask')
     event.preventDefault();
-    console.log('add')
+    console.log(novaTaskNomeada.value)
 
     const taskItem =  document.createElement("div");
     taskItem.classList.add('task-item');
@@ -42,7 +42,8 @@ function newTask(){
     taskItem.appendChild(inputItem)
 
     const paragrafo = document.createElement("p")
-    var texto = document.createTextNode (' Do the homework')
+    var texto = document.createTextNode ( novaTaskNomeada.value)
+    novaTaskNomeada.value = ''
     taskItem.appendChild(texto)
 
 
@@ -57,14 +58,9 @@ function newTask(){
 
     taskItem.appendChild(novoButaoLixo)
 
+    var novaTaskNomeada = document.querySelector('.inputTask')
 
     
-    
-
-    
-
-   
-
 
     
 }
