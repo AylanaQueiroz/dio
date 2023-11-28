@@ -61,7 +61,9 @@ function newTask(){
 
     taskItem.appendChild(novoButaoLixo)
 
-    var novaTaskNomeada = document.querySelector('.inputTask')
+    novoButaoLixo.addEventListener('click', deletarTarefa)
+
+    var c = document.querySelector('.inputTask')
     
 }
 
@@ -73,6 +75,8 @@ function deletarTarefa(e) {
 console.log(e);
 e.target.parentElement.parentElement.remove();
 
+
+console.log(e)
 } 
 
 
