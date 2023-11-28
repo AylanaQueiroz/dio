@@ -26,6 +26,9 @@ const taskBox = document.querySelector('.task-box')
 buttonNewtask.addEventListener('click', newTask)
 
 
+const botaoDeletar = document.querySelector('#lixo');
+botaoDeletar.addEventListener('click', deletarTarefa)
+
 function newTask(){
     var novaTaskNomeada = document.querySelector('.inputTask')
     event.preventDefault();
@@ -59,12 +62,18 @@ function newTask(){
     taskItem.appendChild(novoButaoLixo)
 
     var novaTaskNomeada = document.querySelector('.inputTask')
-
-    
-
     
 }
 
+
+
+
+function deletarTarefa(e) {
+
+console.log(e);
+e.target.parentElement.parentElement.remove();
+
+} 
 
 
 
