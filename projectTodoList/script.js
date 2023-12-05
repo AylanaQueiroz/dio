@@ -26,29 +26,34 @@ const taskBox = document.querySelector('.task-box')
 buttonNewtask.addEventListener('click', newTask)
 
 
-const botaoDeletar = document.querySelector('#lixo');
-botaoDeletar.addEventListener('click', deletarTarefa)
 
-function newTask(){
+//const botaoDeletar = document.querySelector('#lixo');
+//botaoDeletar.addEventListener('click', deletarTarefa);
+
+
+
+
+function newTask() {
+
+
     var novaTaskNomeada = document.querySelector('.inputTask')
     event.preventDefault();
     console.log(novaTaskNomeada.value)
 
-    const taskItem =  document.createElement("div");
+    const taskItem = document.createElement("div");
     taskItem.classList.add('task-item');
-
     taskBox.appendChild(taskItem)
 
-    const inputItem = document.createElement("input")
-    inputItem.type = 'checkbox'
-    
-    taskItem.appendChild(inputItem)
+
+    const inputItemCheck = document.createElement("input")
+    inputItemCheck.type = 'checkbox'
+    taskItem.appendChild(inputItemCheck)
 
     const paragrafo = document.createElement("p")
-    var texto = document.createTextNode ( novaTaskNomeada.value)
+    var texto = document.createTextNode(novaTaskNomeada.value)
     novaTaskNomeada.value = ''
     taskItem.appendChild(texto)
-
+    tt = texto
 
 
     const novoButaoLixo = document.createElement("button")
@@ -64,21 +69,44 @@ function newTask(){
     novoButaoLixo.addEventListener('click', deletarTarefa)
 
     var c = document.querySelector('.inputTask')
-    
+
+
+}
+
+
+inputItemCheck.addEventListener('click', tarefaConcluida)
+
+function deletarTarefa(e) {
+
+    console.log(e);
+    e.target.parentElement.parentElement.remove();
+
+    console.log('teste')
+
 }
 
 
 
-
-function deletarTarefa(e) {
-
-console.log(e);
-e.target.parentElement.parentElement.remove();
+inputItemCheck.addEventListener('click', tarefaConcluida)
 
 
-console.log(e)
-} 
+function tarefaConcluida(e) {
+
+    inputItemCheck.addEventListener('click', tarefaConcluida)
+    console.log('éuque')
 
 
 
+    e.target.parentElement.style.textDecoration = "line-through"
+    console.log(e.target.parentElement)
+
+
+}
+
+
+
+function risco(e) {
+
+
+}
 
