@@ -1,9 +1,10 @@
+
+
 const botaoPlus = document.querySelector('#plusButton');
 
 const divTaskBox = document.querySelector('.task-box');
 
-
-
+const campoInputFixo = document.querySelector('.inputTask')
 
 //event.preventDefault() // coloco para conseguir manter a informação que havia aqui antes da pagina renderizar// d
 
@@ -25,6 +26,10 @@ function novaTarefa() {
     novoInput.setAttribute("type", 'checkbox');
     novaDiv.appendChild(novoInput); // acrescenta o input à nova Div criada anteriormente
 
+    novoInput.addEventListener('click', tarefaConcluida) //Criado aqui um eventListener para chamar outra função, quando a tarefa estiver concluída
+    
+    
+
     const entradaInputt = document.querySelector('.inputTask');
     event.preventDefault();
     const entradaInputComValor = entradaInputt.value;// indicando pegar o valor do input
@@ -43,5 +48,35 @@ function novaTarefa() {
     iconeLixo.classList.add('fa-solid');
     btnExcluir.appendChild(iconeLixo);
 
+    campoInputFixo.value = ' ' // para limpar o campo do input principal toda vez que for renderizado
+
+    btnExcluir.addEventListener('click', deletarTarefa)  // DECLARO AQUI UM ONCLICK PARA A NOVA FUNÇÃO QUE CRIAREI, PRECISA SER DECLARADO DENTRO DE UMA FUNCTION
+    //SENÃO NAO FUNCIONA
+
+
+
 }
 
+function deletarTarefa(event) {
+
+
+    //console.log(event.target); //event.target é para mostrar de onde está vindo o evento 
+    event.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
+    //2 filhos (engloando toda a DIV assim)
+
+}
+
+function tarefaConcluida(event) {
+
+    
+  
+   divTaskBox.classList.add('sublinhado');
+
+   
+    
+
+
+
+
+
+}

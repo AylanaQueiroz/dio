@@ -1,8 +1,11 @@
 
 .task-item {
     display: flex;
+   
 }
 
-button {
+.sublinhado {
+
+    text-decoration: line-through;
     
 }
