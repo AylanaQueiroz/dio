@@ -1,112 +1,47 @@
+const botaoPlus = document.querySelector('#plusButton');
 
-//var novoParagrafo = document.createElement("p");
-
-
-//var texto =  document.createTextNode("este texto é um teste");
-
-//novoParagrafo.appendChild(texto);
-
-//console.log(novoParagrafo);
-
-//var body = document.querySelector("body");
-//console.log(body);
-
-
-
-//var inserirnoP = document.querySelector(".testep")
-
-//nserirnoP.appendChild(novoParagrafo)
-
-//body.appendChild(novoParagrafo);
-
-// toDo list
-
-const buttonNewtask = document.querySelector('.new-task-button');
-const taskBox = document.querySelector('.task-box')
-buttonNewtask.addEventListener('click', newTask)
-
-
-
-//const botaoDeletar = document.querySelector('#lixo');
-//botaoDeletar.addEventListener('click', deletarTarefa);
+const divTaskBox = document.querySelector('.task-box');
 
 
 
 
-function newTask() {
+//event.preventDefault() // coloco para conseguir manter a informação que havia aqui antes da pagina renderizar// d
 
 
-    var novaTaskNomeada = document.querySelector('.inputTask')
+
+
+
+
+botaoPlus.addEventListener('click', novaTarefa);
+
+
+function novaTarefa() {
+
+    const novaDiv = document.createElement('div'); //criar uma nova div
+    novaDiv.classList.add('task-item');
+    divTaskBox.appendChild(novaDiv);
+
+    const novoInput = document.createElement('input');
+    novoInput.setAttribute("type", 'checkbox');
+    novaDiv.appendChild(novoInput); // acrescenta o input à nova Div criada anteriormente
+
+    const entradaInputt = document.querySelector('.inputTask');
     event.preventDefault();
-    console.log(novaTaskNomeada.value)
+    const entradaInputComValor = entradaInputt.value;// indicando pegar o valor do input
+    console.log(entradaInputComValor);
 
-    const taskItem = document.createElement("div");
-    taskItem.classList.add('task-item');
-    taskBox.appendChild(taskItem)
+    const paragrafo = document.createElement('p');
+    paragrafo.innerText = (entradaInputComValor);
+    //document.body.appendChild(paragrafo)
+    novaDiv.appendChild(paragrafo);
 
+    const btnExcluir = document.createElement('button');
+    novaDiv.appendChild(btnExcluir);
 
-    const inputItemCheck = document.createElement("input")
-    inputItemCheck.type = 'checkbox'
-    taskItem.appendChild(inputItemCheck)
-
-    const paragrafo = document.createElement("p")
-    var texto = document.createTextNode(novaTaskNomeada.value)
-    novaTaskNomeada.value = ''
-    taskItem.appendChild(texto)
-    tt = texto
-
-
-    const novoButaoLixo = document.createElement("button")
-    taskItem.appendChild(novoButaoLixo)
-
-    const iconeLixeira = document.createElement("i")
-    iconeLixeira.classList.add('bi');
-    iconeLixeira.classList.add('bi-trash');
-    novoButaoLixo.appendChild(iconeLixeira)
-
-    taskItem.appendChild(novoButaoLixo)
-
-    novoButaoLixo.addEventListener('click', deletarTarefa)
-
-    var c = document.querySelector('.inputTask')
-
-
-}
-
-
-inputItemCheck.addEventListener('click', tarefaConcluida)
-
-function deletarTarefa(e) {
-
-    console.log(e);
-    e.target.parentElement.parentElement.remove();
-
-    console.log('teste')
-
-}
-
-
-
-inputItemCheck.addEventListener('click', tarefaConcluida)
-
-
-function tarefaConcluida(e) {
-
-    inputItemCheck.addEventListener('click', tarefaConcluida)
-    console.log('éuque')
-
-
-
-    e.target.parentElement.style.textDecoration = "line-through"
-    console.log(e.target.parentElement)
-
-
-}
-
-
-
-function risco(e) {
-
+    const iconeLixo = document.createElement('i');
+    iconeLixo.classList.add('fa-trash'); // acrescenta-se os dois nomes de classe do ícone
+    iconeLixo.classList.add('fa-solid');
+    btnExcluir.appendChild(iconeLixo);
 
 }
 
