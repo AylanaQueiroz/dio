@@ -69,14 +69,16 @@ function deletarTarefa(event) {
 function tarefaConcluida(event) {
 
     
-  
-   divTaskBox.classList.add('sublinhado');
+   // divTaskBox.classList.replace('task-box', 'sublinhado')
+
+  // divTaskBox.classList.add('sublinhado');
+
+   divTaskBox.classList.toggle('is-active')  //toggle é marailhoso, Fazer o toggle de uma classe. Isto é, adicionar a classe se não existir e, caso contrário, remover:
+
+                                                                    //element.classList.toggle('is-active'); assim quando clica novamente no checkbox ele retira a classe e tira o ''line-thru''
+
 
    
-    
-
-
-
 
 
 }

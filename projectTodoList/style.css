@@ -1,11 +1,36 @@
+.container {
+    margin-left: 10px;
+    background-color: rgba(207, 235, 235, 0.452);
+
+}
+
+h1 {
+
+    color: rgb(117, 143, 173);
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.inputTask {
+
+    border-radius: 3px solid black;  
+}
+
+
+h2 {
+
+    color: rgb(78, 140, 194);
+}
+
+
 
 .task-item {
     display: flex;
-   
+
 }
 
-.sublinhado {
 
-    text-decoration: line-through;
-    
+.is-active {
+
+    text-decoration: line-through
 }
