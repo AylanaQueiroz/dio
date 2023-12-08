@@ -1,24 +1,33 @@
-.container {
-    margin-left: 10px;
+body {
     background-color: rgba(207, 235, 235, 0.452);
+}
+
+.container {
+    background-color: rgba(207, 235, 235, 0.452);
+    border-radius: 90px;
 
 }
 
 h1 {
-
     color: rgb(117, 143, 173);
     font-family: 'Barlow', sans-serif;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 
+.new-task {
+    margin-left: 200px;
+
+}
 
 .inputTask {
-
-    border-radius: 3px solid black;  
+    border-radius: 3px solid black;
+    margin-top: 10px;
 }
 
 
 h2 {
-
+    margin-left: 200px;
     color: rgb(78, 140, 194);
 }
 
@@ -26,11 +35,9 @@ h2 {
 
 .task-item {
     display: flex;
-
 }
 
 
 .is-active {
-
     text-decoration: line-through
 }

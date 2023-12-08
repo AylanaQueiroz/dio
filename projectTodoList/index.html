@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Caveat&family=Croissant+One&family=DM+Sans&family=Dhurjati&family=Josefin+Sans:wght@400;700&family=Manrope:wght@500&family=Outfit:wght@700&family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -18,20 +19,22 @@
 
 <body>
     <div class="container">
-        <h1>Lista de atvidades</h1>
+        <h1>Lista de atividades</h1>
         <form>
             <div class="new-task">
                 <input type="text" class="inputTask" placeholder="Adicione uma atividade">
-                <button class="new-task-button btn btn-primary btn-lg" type="submit" id="plusButton">+</button>
+                <button class="new-task-button btn btn-outline-primary" type="submit" id="plusButton">+</button>
                 <p id="demo"> </p>
             </div>
         </form>
-        <div id="addItem" class="task-box">
-            <h2>Atividades:</h2>
+        <h2>Atividades:</h2>
 
+        <div id="addItem" class="task-box">
+          
         </div>
     </div>
 
     <script src="https://kit.fontawesome.com/e915725ea4.js" crossorigin="anonymous"></script>
+    
     <script src="script.js"></script>
 </body>

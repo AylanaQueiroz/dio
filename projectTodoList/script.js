@@ -1,5 +1,3 @@
-
-
 const botaoPlus = document.querySelector('#plusButton');
 
 const divTaskBox = document.querySelector('.task-box');
@@ -7,10 +5,6 @@ const divTaskBox = document.querySelector('.task-box');
 const campoInputFixo = document.querySelector('.inputTask')
 
 //event.preventDefault() // coloco para conseguir manter a informação que havia aqui antes da pagina renderizar// d
-
-
-
-
 
 
 botaoPlus.addEventListener('click', novaTarefa);
@@ -29,7 +23,6 @@ function novaTarefa() {
     novoInput.addEventListener('click', tarefaConcluida) //Criado aqui um eventListener para chamar outra função, quando a tarefa estiver concluída
     
     
-
     const entradaInputt = document.querySelector('.inputTask');
     event.preventDefault();
     const entradaInputComValor = entradaInputt.value;// indicando pegar o valor do input
@@ -53,32 +46,21 @@ function novaTarefa() {
     btnExcluir.addEventListener('click', deletarTarefa)  // DECLARO AQUI UM ONCLICK PARA A NOVA FUNÇÃO QUE CRIAREI, PRECISA SER DECLARADO DENTRO DE UMA FUNCTION
     //SENÃO NAO FUNCIONA
 
-
-
 }
 
-function deletarTarefa(event) {
-
+function deletarTarefa(e) {
 
     //console.log(event.target); //event.target é para mostrar de onde está vindo o evento 
     event.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
     //2 filhos (engloando toda a DIV assim)
-
+   
 }
 
-function tarefaConcluida(event) {
-
-    
-   // divTaskBox.classList.replace('task-box', 'sublinhado')
-
-  // divTaskBox.classList.add('sublinhado');
-
-   divTaskBox.classList.toggle('is-active')  //toggle é marailhoso, Fazer o toggle de uma classe. Isto é, adicionar a classe se não existir e, caso contrário, remover:
-
-                                                                    //element.classList.toggle('is-active'); assim quando clica novamente no checkbox ele retira a classe e tira o ''line-thru''
-
-
+function tarefaConcluida(e) {
+     
+   e.target.parentElement.classList.toggle('is-active')  //toggle é marailhoso, Fazer o toggle de uma classe. Isto é, adicionar a classe se não existir e, caso contrário, remover:
    
-
-
+                                                                    //element.classList.toggle('is-active'); assim quando clica novamente no checkbox ele retira a classe e tira o ''line-thru''
+ 
+                                                                   
 }
