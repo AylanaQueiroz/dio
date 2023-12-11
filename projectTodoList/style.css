@@ -4,7 +4,8 @@ body {
 
 .container {
     background-color: rgba(207, 235, 235, 0.452);
-    border-radius: 90px;
+    border-radius: 80px;
+    color: 3b3bce;
 
 }
 
@@ -39,5 +40,16 @@ h2 {
 
 
 .is-active {
-    text-decoration: line-through
+    text-decoration: line-through;
+    color: rgb(140, 179, 83);
+    font-weight: bold;
+}
+
+i {
+    color:rgba(25, 0, 255, 0.932)
+}
+
+button {
+ border-color: rgb(0, 255, 213);   
+ border-radius: 10px;
 }
