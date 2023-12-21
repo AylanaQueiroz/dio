@@ -1,9 +1,27 @@
-function informarClima() {
+const pesquisar = document.querySelector('#botaoBuscar')
 
-  const climaAgora =   fetch ('https://api.openweathermap.org/data/2.5/weather?q=orlando&appid=46bbf8fe32bbd679e3c3ef640f7f251f')
+pesquisar.addEventListener('click', informarClima)
 
-    console.log (climaAgora)
+async function informarClima() {
 
+    const chave = '46bbf8fe32bbd679e3c3ef640f7f251f';
+    const cidade = 'goiania'
+    
+
+    const climaAgora = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${chave}`)
+
+    console.log(climaAgora)
+
+    const data = await climaAgora.json()
+
+    console.log(data)
+
+    
+ 
 }
 
 informarClima()
+
+//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${appkey}
