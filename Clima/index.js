@@ -1,6 +1,3 @@
-
-
-
 const pesquisar = document.querySelector('#botaoBuscar')
 const cidade = document.querySelector('.inputCidade')
 const divBody = document.querySelector('.climaAqui')
@@ -26,68 +23,75 @@ async function informarClima() {
 
     console.log(data)
     //data.map((weather) => {
-    for (const product of data.weather){
+    for (const product of data.weather) {
 
         //titulo.innerText =  product.id
         const novaDiv = document.createElement('div');
         const titulo = document.createElement('h2')
-        const corpo =  document.createElement('p')
- 
-        titulo.innerText = ('o Clima em ' + buscarCidade + ' apresenta-se: '+ product.description)
+        const corpo = document.createElement('p')
+
+        titulo.innerText = ('O Clima em ' + buscarCidade + ' apresenta-se de: ' + product.description)
 
         console.log(titulo)
 
         novaDiv.appendChild(titulo);
         novaDiv.appendChild(corpo)
-    
-    
+
+
         divBody.appendChild(novaDiv)
+
+
+
+        cidade.addEventListener('click', limparCampo)
+
+        function limparCampo() {
+            novaDiv.style.display = 'none'
+        }
 
     }
 
-//})
-
-
-    
-
 }
 
-   /* 
-   console.log(data)
-
-    const novaDiv = document.createElement('div')
-    divBody.appendChild(novaDiv)
-
-    const novoParagrafo = document.createElement('p')
-   
-
-    novoParagrafo.innerText = ('A temperatura a minha cidade é ')
-    divBody.appendChild(novoParagrafo)
-
-    cidade.value = ' '
-
-   
-   
-   
-   
-   
-   mostrarClima(data)
-
-    data.map((weather) =>{
-        const divResultado = document.createElement('div')
-        const temperatura = document.createElement('p')
-    
-        temperatura.innerText = weather.clouds
-
-    
-        divResultado.appendChild(temperatura)
-    
-    
-        console.log(divResultado)
-       })
 
 
-    
+
+
+/*
+console.log(data)
+
+ const novaDiv = document.createElement('div')
+ divBody.appendChild(novaDiv)
+
+ const novoParagrafo = document.createElement('p')
+ 
+
+ novoParagrafo.innerText = ('A temperatura a minha cidade é ')
+ divBody.appendChild(novoParagrafo)
+
+ cidade.value = ' '
+
+ 
+ 
+ 
+ 
+ 
+mostrarClima(data)
+
+ data.map((weather) =>{
+     const divResultado = document.createElement('div')
+     const temperatura = document.createElement('p')
+ 
+     temperatura.innerText = weather.clouds
+
+ 
+     divResultado.appendChild(temperatura)
+ 
+ 
+     console.log(divResultado)
+    })
+
+
+ 
 }*/
 
 
@@ -107,5 +111,5 @@ data.map((weather) =>{
     
 */
 
-   
+
 
