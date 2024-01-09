@@ -16,6 +16,15 @@ h1 {
     margin-top: 20px;
 }
 
+
+p {
+    font-size: 40px;
+    font-family: 'Barlow', sans-serif;
+    padding-left: 10px;
+
+}
+
+
 .new-task {
     margin-left: 200px;
 
@@ -41,15 +50,26 @@ h2 {
 
 .is-active {
     text-decoration: line-through;
-    color: rgb(140, 179, 83);
+    color: rgb(0, 226, 49);
     font-weight: bold;
 }
 
 i {
-    color:rgba(25, 0, 255, 0.932)
+    color: rgba(169, 163, 228, 0.932)
 }
 
 button {
- border-color: rgb(0, 255, 213);   
- border-radius: 10px;
+    border-color: rgba(169, 163, 228, 0.932);
+    width: 30px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.btn {
+    margin-top: 0;
+    margin-left: 5px;
+    width: 35px;
+    height: 40px;
 }
