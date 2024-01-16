@@ -51,13 +51,14 @@ function novaTarefa() {
 
 
 
-    function deletarTarefa(e) {
+    function deletarTarefa() {
 
-        e.target.parentElement.parentElement.remove()
-        
+
+        novaDiv.remove()
 
 
 }
+
 }
 
 /*function deletarTarefa() {
