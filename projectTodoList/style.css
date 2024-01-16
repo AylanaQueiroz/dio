@@ -72,10 +72,5 @@ button {
 
 
 
-@media (min-width: 992px){
-    .container {
-        width: 50%;
-        margin: 0 auto;
-    }
 
-}
+
