@@ -21,12 +21,12 @@ p {
     font-size: 40px;
     font-family: 'Barlow', sans-serif;
     padding-left: 10px;
-    color:#486c87;
+    color: #486c87;
 }
 
 
 .inputTask {
-   margin-top: 15px;
+    margin-top: 15px;
 }
 
 #plusButton {
@@ -60,14 +60,13 @@ i {
 
 
 button {
-    border-color:#486c87;
+    border-color: #486c87;
     width: 40px;
     height: 40px;
     border-radius: 10px;
     border-style: solid;
     position: relative;
-    top:15px;
-    left:10px;
+    top: 15px;
+    left: 10px;
 }
-
 

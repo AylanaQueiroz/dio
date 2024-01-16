@@ -51,7 +51,7 @@ function novaTarefa() {
 function deletarTarefa(e) {
 
     //console.log(event.target); //event.target é para mostrar de onde está vindo o evento 
-    event.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
+    e.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
     //2 filhos (engloando toda a DIV assim)
    
 }
