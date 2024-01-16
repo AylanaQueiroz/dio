@@ -51,10 +51,10 @@ function novaTarefa() {
 
 
 
-    function deletarTarefa() {
+    function deletarTarefa(e) {
 
+        e.target.parentElement.parentElement.remove()
         
-        novaDiv.remove()
 
 
 }
