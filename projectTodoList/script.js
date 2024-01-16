@@ -4,6 +4,9 @@ const divTaskBox = document.querySelector('.task-box');
 
 const campoInputFixo = document.querySelector('.inputTask')
 
+
+
+
 //event.preventDefault() // coloco para conseguir manter a informação que havia aqui antes da pagina renderizar// d
 
 
@@ -46,16 +49,27 @@ function novaTarefa() {
     btnExcluir.addEventListener('click', deletarTarefa)  // DECLARO AQUI UM ONCLICK PARA A NOVA FUNÇÃO QUE CRIAREI, PRECISA SER DECLARADO DENTRO DE UMA FUNCTION
     //SENÃO NAO FUNCIONA
 
+
+
+    function deletarTarefa() {
+
+        
+        novaDiv.remove()
+
+
+}
 }
 
-function deletarTarefa(e) {
+/*function deletarTarefa() {
 
     //console.log(event.target); //event.target é para mostrar de onde está vindo o evento 
-    e.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
+    //e.target.parentElement.parentElement.remove() // é necessário utilizar 2 parentElements porque o .parentElement elimina apenas o filho, então 2 eliminará os
     //2 filhos (engloando toda a DIV assim)
+    console.log(event.target)
    
+    
 }
-
+*/
 function tarefaConcluida(e) {
      
    e.target.parentElement.classList.toggle('is-active')  //toggle é marailhoso, Fazer o toggle de uma classe. Isto é, adicionar a classe se não existir e, caso contrário, remover:
