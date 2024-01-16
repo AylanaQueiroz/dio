@@ -20,15 +20,22 @@ h1 {
 p {
     font-size: 40px;
     font-family: 'Barlow', sans-serif;
-    padding-left: 10px
+    padding-left: 10px;
+    color:#486c87;
 }
 
 
 .inputTask {
-    border-radius: 3px solid black;
-    margin-top: 10px;
+   margin-top: 15px;
 }
 
+#plusButton {
+    position: relative;
+    top: 0;
+    margin-left: 5px;
+    width: 35px;
+    height: 40px;
+}
 
 h2 {
     color: rgb(78, 140, 194);
@@ -42,31 +49,25 @@ h2 {
 
 .is-active {
     text-decoration: line-through;
-    color: rgb(0, 226, 49);
+    color: rgb(82, 192, 106);
 }
 
 
 i {
-    color: rgba(169, 163, 228, 0.932);
+    color: #47a0b2;
 
 }
 
 
 button {
-    border-color: rgba(169, 163, 228, 0.932);
-    width: 35px;
+    border-color:#486c87;
+    width: 40px;
     height: 40px;
     border-radius: 10px;
     border-style: solid;
     position: relative;
-    margin-top: 10px;
-    margin-left: 5px;
+    top:15px;
+    left:10px;
 }
 
 
-.btn {
-    margin-top: 0;
-    margin-left: 5px;
-    width: 35px;
-    height: 40px;
-}
